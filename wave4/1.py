@@ -13,9 +13,9 @@ class Solution:
 
     def dfs(self, n, k, m, p, tmp):
         if k == p:
-            self.res.append(tmp[:])
+            self.res.append(tmp[:]) # create a clone of tmp
             return
-        for i in range(m, n+1):            
+        for i in range(m, n + 1):            
             tmp.append(i)            
-            self.dfs(n, k, i+1, p+1, tmp)            
+            self.dfs(n, k, i + 1, p + 1, tmp)            
             tmp.pop()
